@@ -11,7 +11,7 @@ public class Jump : MonoBehaviour
 	{
 		if (Input.GetKeyDown(KeyCode.Space) && IsGrounded()) {
 			rigidbody2D.AddForce(Vector2.up * jumpPower);
-
+			// rigidbody2D.AddForce(-Vector2.up * (jumpPower * 0.2f));
 		}
 	}
 
@@ -19,7 +19,7 @@ public class Jump : MonoBehaviour
 	{
 		Vector3 t = transform.position;
 		t.y += 0.5f;
-		Gizmos.DrawRay(t, Vector2.up);
+		// Gizmos.DrawRay(t, Vector2.up);
 	}
 
 	bool IsGrounded()

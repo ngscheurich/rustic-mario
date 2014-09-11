@@ -352,13 +352,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraProvider: {fileID: 0}
+  intentProvider: {fileID: 0}
   selectedUnits:
   - {fileID: 0}
-  intents: 
   selector: {fileID: 0}
   tagFilter: Unit
   followFilter: Unit
-  defaultKeymap: []
+  attackFilter: Unit
+  DEBUG_MODE: 0
 --- !u!1 &1548168457
 GameObject:
   m_ObjectHideFlags: 0
