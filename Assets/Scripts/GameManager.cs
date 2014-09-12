@@ -49,7 +49,8 @@ public class GameManager : MonoBehaviour
 	private void GenerateLevel(GameObject level, BlockGenerator generator)
 	{
 		Level levelObj = level.GetComponent<Level>();
-		string[] levelAry = levelObj.levelMap.text.Split();
+		string[] levelAry = levelObj.levelMap.text.Replace("\r\n","\n").Split('\n');
+
 		int levelHeight = levelAry.Length - 1;
 		
 		Vector3 currentPos = new Vector3(0, (float)levelHeight, 0);

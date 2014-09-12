@@ -306,7 +306,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1004791266}
   - 114: {fileID: 1004791265}
-  - 114: {fileID: 1004791267}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -340,26 +339,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
---- !u!114 &1004791267
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1004791264}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8cdf00b01b5244aa3b33300f0202813b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cameraProvider: {fileID: 0}
-  intentProvider: {fileID: 0}
-  selectedUnits:
-  - {fileID: 0}
-  selector: {fileID: 0}
-  tagFilter: Unit
-  followFilter: Unit
-  attackFilter: Unit
-  DEBUG_MODE: 0
 --- !u!1 &1548168457
 GameObject:
   m_ObjectHideFlags: 0
@@ -470,6 +449,6 @@ MonoBehaviour:
   - character: '?'
     blockObject: {fileID: 100002, guid: f489a12242fde4d96b4f6e2d95d5c1af, type: 2}
   - character: g
-    blockObject: {fileID: 100002, guid: d98b846d47a5e42c295dbaf3a425d5a8, type: 2}
+    blockObject: {fileID: 100000, guid: e5867946cbc7ee14a809dbc585dcc3b8, type: 2}
   - character: m
     blockObject: {fileID: 100002, guid: 8e374372b0cca431b98802c4b6ee4a5b, type: 2}
