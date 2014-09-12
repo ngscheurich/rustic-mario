@@ -452,3 +452,5 @@ MonoBehaviour:
     blockObject: {fileID: 100000, guid: e5867946cbc7ee14a809dbc585dcc3b8, type: 2}
   - character: m
     blockObject: {fileID: 100002, guid: 8e374372b0cca431b98802c4b6ee4a5b, type: 2}
+  - character: b
+    blockObject: {fileID: 100000, guid: b6fffef5a80f2c24d97baf1b67fcd389, type: 2}

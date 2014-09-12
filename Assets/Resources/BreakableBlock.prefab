@@ -68,11 +68,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0571b725802835f47af1d52d54f1869f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  elements: 05000000
+  elements: 06000000
   reactions:
-  - e: 9
+  - e: 10
     r: 0
-  DEBUG_MODE: 0
+  me: {fileID: 0}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
