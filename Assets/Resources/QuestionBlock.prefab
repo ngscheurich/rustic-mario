@@ -69,8 +69,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elements: 06000000
-  reactions: []
-  DEBUG_MODE: 0
+  reactions:
+  - e: 10
+    r: 6
+  me: {fileID: 100002}
 --- !u!212 &21200002
 SpriteRenderer:
   m_ObjectHideFlags: 1
