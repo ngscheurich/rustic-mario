@@ -12,6 +12,8 @@ GameObject:
   - 50: {fileID: 5000000}
   - 212: {fileID: 21200002}
   - 114: {fileID: 11400000}
+  - 114: {fileID: 11400002}
+  - 114: {fileID: 11400004}
   m_Layer: 8
   m_Name: QuestionBlock
   m_TagString: Untagged
@@ -73,6 +75,31 @@ MonoBehaviour:
   - e: 10
     r: 6
   me: {fileID: 100002}
+  changeTarget: {fileID: 0}
+--- !u!114 &11400002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bf9e648761e1e64ea9a9a40140dfc13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  me: {fileID: 100002}
+--- !u!114 &11400004
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 563b2f94ff234c24ba97e5a2716ed0f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnType: {fileID: 100000, guid: b6fffef5a80f2c24d97baf1b67fcd389, type: 2}
 --- !u!212 &21200002
 SpriteRenderer:
   m_ObjectHideFlags: 1

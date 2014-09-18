@@ -12,6 +12,7 @@ GameObject:
   - 50: {fileID: 5000000}
   - 212: {fileID: 21200000}
   - 114: {fileID: 11400000}
+  - 114: {fileID: 11400002}
   m_Layer: 8
   m_Name: BreakableBlock
   m_TagString: Untagged
@@ -69,10 +70,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elements: 06000000
-  reactions:
-  - e: 10
-    r: 0
+  reactions: []
   me: {fileID: 0}
+  changeTarget: {fileID: 0}
+--- !u!114 &11400002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bf9e648761e1e64ea9a9a40140dfc13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  me: {fileID: 100002}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
