@@ -73,8 +73,6 @@ MonoBehaviour:
   reactions:
   - element: 10
     reaction: 0
-  - element: 12
-    reaction: 4
   changeTarget: {fileID: 11400002}
 --- !u!114 &11400002
 MonoBehaviour:
