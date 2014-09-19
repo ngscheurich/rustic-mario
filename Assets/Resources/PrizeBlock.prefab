@@ -14,8 +14,9 @@ GameObject:
   - 114: {fileID: 11400000}
   - 114: {fileID: 11400002}
   - 114: {fileID: 11400004}
+  - 114: {fileID: 11400006}
   m_Layer: 8
-  m_Name: QuestionBlock
+  m_Name: PrizeBlock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -70,12 +71,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0571b725802835f47af1d52d54f1869f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  elements: 06000000
   reactions:
-  - e: 10
-    r: 6
-  me: {fileID: 100002}
-  changeTarget: {fileID: 0}
+  - element: 10
+    reaction: 6
+  changeTarget: {fileID: 11400002}
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -100,6 +99,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnType: {fileID: 100000, guid: b6fffef5a80f2c24d97baf1b67fcd389, type: 2}
+--- !u!114 &11400006
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4607a0096d3e55649ae20819d660849f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  elements: 07000000
 --- !u!212 &21200002
 SpriteRenderer:
   m_ObjectHideFlags: 1

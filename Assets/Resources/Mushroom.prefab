@@ -16,6 +16,7 @@ GameObject:
   - 114: {fileID: 11400000}
   - 114: {fileID: 11400004}
   - 114: {fileID: 11400010}
+  - 114: {fileID: 11400012}
   m_Layer: 0
   m_Name: Mushroom
   m_TagString: Untagged
@@ -33,7 +34,6 @@ GameObject:
   - 4: {fileID: 400002}
   - 61: {fileID: 6100002}
   - 114: {fileID: 11400006}
-  - 114: {fileID: 11400014}
   m_Layer: 0
   m_Name: RightSide
   m_TagString: Untagged
@@ -51,7 +51,6 @@ GameObject:
   - 4: {fileID: 400004}
   - 61: {fileID: 6100004}
   - 114: {fileID: 11400008}
-  - 114: {fileID: 11400012}
   m_Layer: 0
   m_Name: LeftSide
   m_TagString: Untagged
@@ -167,18 +166,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0571b725802835f47af1d52d54f1869f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  elements: 05000000
   reactions:
-  - e: 9
-    r: 0
-  - e: 10
-    r: 0
-  - e: 11
-    r: 0
-  - e: 3
-    r: 0
-  me: {fileID: 100000}
-  changeTarget: {fileID: 0}
+  - element: 3
+    reaction: 0
+  - element: 9
+    reaction: 0
+  - element: 10
+    reaction: 0
+  - element: 11
+    reaction: 0
+  changeTarget: {fileID: 11400010}
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -218,12 +215,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0571b725802835f47af1d52d54f1869f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  elements: 05000000
   reactions:
-  - e: 12
-    r: 3
-  me: {fileID: 100000}
-  changeTarget: {fileID: 0}
+  - element: 12
+    reaction: 3
+  changeTarget: {fileID: 11400010}
 --- !u!114 &11400008
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -235,12 +230,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0571b725802835f47af1d52d54f1869f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  elements: 05000000
   reactions:
-  - e: 12
-    r: 3
-  me: {fileID: 100000}
-  changeTarget: {fileID: 0}
+  - element: 12
+    reaction: 3
+  changeTarget: {fileID: 11400010}
 --- !u!114 &11400010
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -258,25 +251,13 @@ MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100004}
+  m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bf9e648761e1e64ea9a9a40140dfc13, type: 3}
+  m_Script: {fileID: 11500000, guid: 4607a0096d3e55649ae20819d660849f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  me: {fileID: 100000}
---- !u!114 &11400014
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bf9e648761e1e64ea9a9a40140dfc13, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  me: {fileID: 100000}
+  elements: 05000000
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
