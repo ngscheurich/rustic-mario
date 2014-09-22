@@ -4,8 +4,8 @@ using System.Collections;
 public class Jump : MonoBehaviour
 {
 	public float jumpPower = 500.0f;
-	
-	private float groundedDistance = 0.00f;
+	public bool requireGround = true;
+	public float groundedDistance = 0.00f;
 
 	void Update()
 	{
@@ -24,6 +24,7 @@ public class Jump : MonoBehaviour
 
 	bool IsGrounded()
 	{
+		if(!requireGround) {return true;}
 		Vector3 groundedOrigin = transform.position;
 		groundedOrigin.y += -transform.localScale.y;
 		RaycastHit2D hit = Physics2D.Raycast(groundedOrigin, -Vector2.up, groundedDistance);
