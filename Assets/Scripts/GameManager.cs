@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
 	public GameObject levelContainer;
 	public GameObject screenFader;
 
-	private delegate void BlockGenerator(Vector3 pos, string type, GameObject parent);
+	private delegate void BlockGenerator(Vector3 pos, GameObject type, GameObject parent);
 
 	void Start()
 	{
@@ -62,7 +62,7 @@ public class GameManager : MonoBehaviour
 				LevelBlock b = levelObj.getBlock(c);
 				
 				if (b != null)
-					generator(currentPos, b.blockObject.name, levelContainer);
+					generator(currentPos, b.blockObject, levelContainer);
 				
 				currentPos.x++;
 			}
@@ -70,14 +70,14 @@ public class GameManager : MonoBehaviour
 		}
 	}
 
-	private void StandardGenerator(Vector3 pos, string type, GameObject parent)
+	private void StandardGenerator(Vector3 pos, GameObject type, GameObject parent)
 	{
-		GameObject currentBlock = Instantiate(Resources.Load<GameObject>(type)) as GameObject;
+		GameObject currentBlock = Instantiate(type) as GameObject;
 		currentBlock.transform.position = pos;
 		currentBlock.transform.parent = parent.transform;
 	}
 
-	private void GizmoGenerator(Vector3 pos, string type, GameObject parent)
+	private void GizmoGenerator(Vector3 pos, GameObject type, GameObject parent)
 	{
 		Gizmos.DrawWireCube(pos, new Vector3(1.0f, 1.0f, 1.0f));
 	}

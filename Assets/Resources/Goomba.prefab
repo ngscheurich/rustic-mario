@@ -18,6 +18,7 @@ GameObject:
   - 114: {fileID: 11400010}
   - 114: {fileID: 11400016}
   - 114: {fileID: 11400012}
+  - 114: {fileID: 11400014}
   m_Layer: 0
   m_Name: Goomba
   m_TagString: Untagged
@@ -243,6 +244,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   me: {fileID: 100000}
+  readManualChange: 0
+  manualResult: 4
 --- !u!114 &11400012
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -255,6 +258,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elements: 03000000
+--- !u!114 &11400014
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23a7f3631a3dad34a880df3967268efb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  legPrefab: {fileID: 100000, guid: 90b1f23ebb107ad41b8b94735055212d, type: 2}
+  footPrefab: {fileID: 100000, guid: d8af685893bf07249b5b245b609fd64d, type: 2}
+  legData:
+    maxJumpSpeed: 2000
+    maxJumpForce: 200
+    maxLiftSpeed: 20
+    maxLiftForce: 25
+    maxFootAdvanceSpeed: 40
+    maxFootAdvanceForce: 50
+  legOne: {fileID: 0}
+  legTwo: {fileID: 0}
+  walking: 1
+  jumping: 0
+  delayJump: 0
+  crouching: 0
+  left: 1
+  tryInputs: 0
+  fullManual: 0
+  currentLegsIntent: 1
 --- !u!114 &11400016
 MonoBehaviour:
   m_ObjectHideFlags: 1

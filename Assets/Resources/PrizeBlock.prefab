@@ -15,7 +15,7 @@ GameObject:
   - 114: {fileID: 11400002}
   - 114: {fileID: 11400004}
   - 114: {fileID: 11400006}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: PrizeBlock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87,6 +87,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   me: {fileID: 100002}
+  readManualChange: 0
+  manualResult: 4
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
