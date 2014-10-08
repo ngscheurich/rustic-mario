@@ -1,16 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
 {
 	public GameObject level;
 	public GameObject levelContainer;
 	public GameObject screenFader;
+	public List<GameObject> generatedObjects;
 
-	private delegate void BlockGenerator(Vector3 pos, GameObject type, GameObject parent);
+	private delegate void BlockGenerator(Vector3 pos, Quaternion rotation, GameObject type);
 
 	void Start()
 	{
+		generatedObjects = new List<GameObject>();
 		BlockGenerator generator = StandardGenerator;
 		GenerateLevel(level, generator);
 	}
@@ -32,12 +35,9 @@ public class GameManager : MonoBehaviour
 
 	IEnumerator ChangeLevel(GameObject newLevel)
 	{
-		foreach (Transform child in levelContainer.transform)
-			GameObject.Destroy(child.gameObject);
+		foreach (var child in generatedObjects) { GameObject.Destroy(child); }
 
-		Debug.Log("Waiting for fade: " + Time.time);
 		yield return StartCoroutine(screenFader.GetComponent<FadeInOut>().Fade());
-		Debug.Log("Fade is complete: " + Time.time);
 
 		BlockGenerator generator = StandardGenerator;
 		GenerateLevel(newLevel, generator);
@@ -62,7 +62,7 @@ public class GameManager : MonoBehaviour
 				LevelBlock b = levelObj.getBlock(c);
 				
 				if (b != null)
-					generator(currentPos, b.blockObject, levelContainer);
+					generator(currentPos, levelContainer.transform.rotation, b.blockObject);
 				
 				currentPos.x++;
 			}
@@ -70,14 +70,13 @@ public class GameManager : MonoBehaviour
 		}
 	}
 
-	private void StandardGenerator(Vector3 pos, GameObject type, GameObject parent)
+	private void StandardGenerator(Vector3 pos, Quaternion rotation, GameObject type)
 	{
-		GameObject currentBlock = Instantiate(type) as GameObject;
-		currentBlock.transform.position = pos;
-		currentBlock.transform.parent = parent.transform;
+		GameObject currentBlock = Instantiate(type, pos, rotation) as GameObject;
+		generatedObjects.Add(currentBlock);
 	}
 
-	private void GizmoGenerator(Vector3 pos, GameObject type, GameObject parent)
+	private void GizmoGenerator(Vector3 pos, Quaternion rotation, GameObject type)
 	{
 		Gizmos.DrawWireCube(pos, new Vector3(1.0f, 1.0f, 1.0f));
 	}

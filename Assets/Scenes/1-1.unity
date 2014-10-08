@@ -344,6 +344,7 @@ MonoBehaviour:
   level: {fileID: 1807602755}
   levelContainer: {fileID: 683614516}
   screenFader: {fileID: 1548168457}
+  generatedObjects: []
 --- !u!4 &1004791266
 Transform:
   m_ObjectHideFlags: 0
