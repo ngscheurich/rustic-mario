@@ -74,6 +74,7 @@ public class GameManager : MonoBehaviour
 	{
 		GameObject currentBlock = Instantiate(type, pos, rotation) as GameObject;
 		generatedObjects.Add(currentBlock);
+		currentBlock.name = type.name;
 	}
 
 	private void GizmoGenerator(Vector3 pos, Quaternion rotation, GameObject type)
